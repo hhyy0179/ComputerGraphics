@@ -1,0 +1,11 @@
+#version 400 core
+    
+in vec3 colv2f;
+out vec3 color;
+
+void main()
+{
+    //vertexshader에 지정한 좌표의 색을 지정해줌.
+    color = colv2f;
+}
+

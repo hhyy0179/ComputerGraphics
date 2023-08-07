@@ -1,0 +1,19 @@
+#version 400 core
+
+in vec3 inPos;
+in vec3 inCol;
+out vec3 colv2f;
+uniform mat4 trans;
+uniform vec3 diff;
+
+void main()
+{
+    //normalize 상의 좌표를 지정함. (x,y,z,w)
+    gl_Position = trans * vec4(inPos + diff, 1);
+    
+    //point의 크기는 5이다.
+    gl_PointSize = 5.0f;
+    colv2f = inCol;
+}
+
+
